@@ -28,6 +28,25 @@ def normalize(array):
 num_train_samples = math.floor(num_house * 0.7)
 print('Amount Samples: {0} / {1}'.format(num_train_samples, num_house))
 
+#define training data
+train_house_size = np.asarray(house_size[:num_train_samples])
+train_house_price = np.asanyarray(house_price[:num_train_samples])
+print('Amount Samples Traing Size:{0} / Price:{1}'.format(train_house_size.size, train_house_price.size))
+
+train_house_size_norm = normalize(train_house_size)
+train_house_price_norm = normalize(train_house_price)
+
+print("Traing Size Normalize: ",train_house_size_norm)
+print("Traing Price Normalize", train_house_price_norm)
+
+# Set up the TensorFlow placeholders that get updated as we descend the gradient
+tf_house_size = tf.placeholder("float", name="house_size")
+tf_house_price = tf.placeholder("float", name="house_price")
+
+# Define the variables holding the size_factor and price we set during training.
+# We initialize them to some random values based on the normal distribution.
+tf_size_factor = tf.Variable(np.random.randn(), name="size_factor")
+tf_price_offset = tf.Variable(np.random.randn(),"")
 
 #plt.plot(house_size, house_price, "bx")
 #plt.ylabel("Price")
