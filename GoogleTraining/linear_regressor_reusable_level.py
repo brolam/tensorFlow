@@ -5,13 +5,13 @@ import matplotlib.pyplot as plt
 import math
 
 # Params trainings
-rate_learning = 0.02
+rate_learning = 0.00001
 limit_epoch = 2000
 steps_show = 50
 
 # Mass of trainigs (price vs fuel)
-train_x = np.asanyarray([3.500, 4.000, 4.500, 5.500, 6.000, 7.000, 7.500, 8.000, 8.500, 9.000, 9.500, 10.000])
-train_y = np.asanyarray([ 1.00,  1.30,  1.50,  1.80,  2.00,  2.80,  3.30,  3.70,  3.90,  4.10,  4.60,   5.00])
+train_x = np.asanyarray([ 2.00, 4.50, 6.00,  8.90,  10.00, 12.80,  14.00, 16.50, 18.00, 20.50, 22.00, 24.10])
+train_y = np.asanyarray([ 1.00, 2.00, 3.00,  4.00,   5.00,  6.00,   7.00,  8.00,  9.00, 10.00, 11.00, 12.00])
 num_train_samples = math.floor(len(train_x) * 0.70)
 
 print("x train", len(train_x))
@@ -33,8 +33,9 @@ plt.ylabel("Price")
 plt.axis('equal')
 plt.savefig('display_price_vs_fuel_initial_analysis.svg') 
 
-hypothesis = tf.add(tf.multiply(a, X), b)
-error = tf.reduce_sum(tf.pow(hypothesis-Y, 2))/(2*num_train_samples)
+#hypothesis = tf.add(tf.multiply(a, X), b)
+hypothesis =  X*a+b
+error = tf.reduce_sum(tf.pow(Y - hypothesis, 2)) / num_train_samples
 otimizador = tf.train.GradientDescentOptimizer(rate_learning).minimize(error)
 
 init = tf.global_variables_initializer()
