@@ -31,8 +31,8 @@ numLabels = trainY.shape[1]
 X = tf.placeholder(tf.float32, [None, numFeatures]) # Iris has 4 features, so X is a tensor to hold our data.
 yGold = tf.placeholder(tf.float32, [None, numLabels]) # This will be our correct answers matrix for 3 classes.
 
-W = tf.Variable(tf.zeros([4, 3]))  # 4-dimensional input and  3 classes
-b = tf.Variable(tf.zeros([3])) # 3-dimensional output [0,0,1],[0,1,0],[1,0,0]
+#W = tf.Variable(tf.zeros([4, 3]))  # 4-dimensional input and  3 classes
+#b = tf.Variable(tf.zeros([3])) # 3-dimensional output [0,0,1],[0,1,0],[1,0,0]
 
 #Randomly sample from a normal distribution with standard deviation .01
 weights = tf.Variable(tf.random_normal([numFeatures,numLabels],
@@ -139,9 +139,37 @@ for i in range(numEpochs):
 print("final accuracy on test set: %s" %str(sess.run(accuracy_OP, 
                                                      feed_dict={X: testX, 
                                                                 yGold: testY})))
-print(cost_values)
 """
 if len(cost_values) > 0:
     plt.plot([np.mean(cost_values[i-50:i]) for i in range(len(cost_values))])
     plt.savefig('logistic_regression01.svg') 
 """
+
+print("Test X: %s" %str(sess.run(tf.argmax(activation_OP,1), feed_dict={X: [[6.1, 2.8, 4.7, 1.2]]})))
+print("Test Y: %s" %str(sess.run(tf.argmax([[0, 1, 0]],1))))
+print("Test Weights: %s" %str(sess.run(weights)))
+print("Test Bias: %s" %str(sess.run(bias)))
+
+#print(testY, testX)
+
+""""
+[[0 1 0]
+ [1 0 0]
+ [0 0 1]
+ [0 1 0]
+ [0 1 0]
+ [1 0 0]
+ [0 1 0]
+[[6.1 2.8 4.7 1.2]
+ [5.7 3.8 1.7 0.3]
+ [7.7 3.8 6.7 2.2]
+ [6.  2.9 4.5 1.5]
+ [6.8 2.8 4.8 1.4]
+ [5.4 3.4 1.5 0.4]
+ [5.6 2.9 3.6 1.3]
+ [6.7 3.1 5.6 2.4]
+ [6.2 2.2 4.5 1.5]
+"""
+
+ 
+ 
