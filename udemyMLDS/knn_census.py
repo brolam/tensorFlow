@@ -30,6 +30,8 @@ from sklearn.model_selection import train_test_split
 previsores_treinamento, previsores_teste, classe_treinamento, classe_teste = train_test_split(previsores, classe, test_size=0.15, random_state=0)
 
 # importação da biblioteca
+from sklearn.neighbors import KNeighborsClassifier
+classificador = KNeighborsClassifier(n_neighbors=5, metric='minkowski', p=2)
 # criação do classificador
 classificador.fit(previsores_treinamento, classe_treinamento)
 previsoes = classificador.predict(previsores_teste)
