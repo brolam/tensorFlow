@@ -75,6 +75,34 @@ Redes Neurais Artificiais
 -Transmição de  sinal "sinapses" entre  os neurais
 -Os axônios conecta os neuronios;
 -Sinapses são as informações que trafegam entre os neuronios;
+-Step Function, um tipo antigo de função de ativação
+-Os pessos são considerado as sinapses
+-O conhecimento da rede Neural são os pesssos, Ex: 
+    Navive Bayes - definir a melhor tabela de Proprabilidade para um conjunto de dados;
+    Arvores de Decisãoes - construir uma arvore de Proprabilidade;
+    Regras - gerar regras "condiçôes se  então" conforme as Proprabilidades de um conjunto de dados;
+    SNV - Aprender a melhor reta para classificar um conjunto de dados;
+    KNN - classificar dados conforme  as distâncias
+    Redes Neuronios - aprender o melhor conjunto de pessos;
+- Regra geral: soma das entradas X pessos aplicado a função de ativação
+- Problemas linear pode ser resolvidos com uma camada, mas problemas não linear tem que ser resolvidos
+  com rede de multicamadas(multilayer);
+- A taxa de aprendizagem atua entre o mínimo local;
+- O Momento "epoca" atua ente os minimos locais;
+- Bias ( Viés); 
+- MSE - Mean Square error;
+- RMSE - Root mean square error: Média da dirença dos valoes previsto ;
+- Regras geral para definir a quantidade de camas oculta: 
+  Neuronios = Entradas + Saidas / 2
+- Duas camadas funciona bem para duas camas ocultas
+- é necessário converter atributos categóricos para ordinarios 
+- RELU (Rectifier) é uma função de ativação que pode ser utilizada no lugar da Sigmoide
+- SoftMax é uma função de ativação para mais de um neuronio;
+- Batch gradiente - calcula o erro para todos os registros e atualizando os pessos;
+- Stochastic gradient descent - Calcular o erro para cada registros e atualiza os pessos;
+
+
+
 
 
 

@@ -1,7 +1,7 @@
 from sklearn.naive_bayes import GaussianNB
 from sklearn.preprocessing import LabelEncoder
 import pandas as pd
-base = pd.read_csv('dados/risco-credito.csv')
+base = pd.read_csv('dados/risco_credito.csv')
 previsores = base.iloc[:, 0:4].values
 classe = base.iloc[:, 4].values
 # Transformando valoes textos em 0 ou 1 com
@@ -20,7 +20,7 @@ print(resultado)
 print('# história: boa, dívida: alta, garantias: nenhuma, renda > 35')
 print('# história: ruin, dívida: alta, garantias: adequada, renda < 15')
 resultado = classificador.predict([[0, 0, 1, 2], [3, 0, 0, 0]])
-print(resultado)
+print(reslsultado)
 print(classificador.classes_)
 print(classificador.class_count_)
 print(classificador.class_prior_)
