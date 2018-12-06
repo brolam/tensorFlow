@@ -1,0 +1,5 @@
+resultado_credit_data
+0.938 - Naive Bays ( inconsistentes, valores faltantes e escalonamentos):
+ arvores_deciscao_credito_data.py
+0.982 - Arvores de deciões  (inconsistenstes, valores faltantes e escalonamentos) 
+ arvores_deciscao_credito_data 

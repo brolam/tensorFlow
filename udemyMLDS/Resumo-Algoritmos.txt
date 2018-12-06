@@ -1,0 +1,109 @@
+Navive Bayes( Tabela de Proprabilidade):
+- Gere um modelo com base nas Proprabilidade;
+Vantagens 
+• Rápido 
+• Simplicidade de interpretação 
+• Trabalha com altas dimensões 
+• Boas previsões em bases pequenas
+Desvantagem 
+• Combinação de características (atributos independentes) – cada par de características são independentes – nem sempre é verdade
+Arvores de Decisãoes:
+- Geração um medelo com base em Arvores
+Vantagens
+• Fácil interpretação
+• Não precisa normalização ou padronização
+• Rápido para classificar novos registros
+Desvantagens
+• Geração de árvores muito complexas
+• Pequenas mudanças nos dados pode mudar a árvore (poda pode ajudar)
+• Problema NP-completo para construir a árvore
+• Eram muito populares em meados dos anos 90
+• Upgrades como random forest (florestas randômicas) melhoram o desempenho (usado no Kinect da Microsoft)
+• CART – classification and regression trees
+
+OneR(CN2) e PRISM ( Regras)
+• Compreensibilidade
+• Pouco espaço de armazenamento 
+• Mais lento (regras) 
+• Em geral, regras não apresentam melhores resultados do que árvores de decisã
+
+KNN (K-Nearest Neighbour)- Algoritmo baseado em Instância:
+- Não construir modelos, somente calcula a distancia 
+- é um Lazy - um Algoritmo preguiçoso
+- é baseado na formula da Distância Euclidiana;
+- é necessários transformar valores categóricos em valores discretos;
+- é necessários a Normalização ou padronização dos atributos;
+Vantagens e Desvantagem:
+• Algoritmo simples e poderoso 
+• Indicado quando o relacionamento entre as características é complexo 
+• Valor de k pequeno: dados com ruídos ou outliers podem prejudicar 
+• Valor de k grande: tendência a classificar a classe com mais elementos 
+  (overfitting) – valor default 3 ou 5 
+• Lento para fazer as previsões
+É possível utilizar outros Algoritmo no lugar da Distância Euclidiana 
+    • Outras distâncias 
+    • Coeficiente de Pearson 
+    • Índice de Tanimoto • City Block
+Regressão Logistica( Também é um Algoritmo de Classificação) :
+- funciona com a aplicação da função Singmoid
+- O algoritmo Descida do gradiente é utilizado no aprendizado para calcular o custo mínimo.
+SVM ( Máquina de vetores de suporte ou Suppor Vector Machines) 
+- Em geral supera os outros algoritmos;
+- Utilizada em algoritmo complex (voz e imagens)
+- Aprender hiperplanos de seração com margem máximas;
+- Na criação do hiperplanos é utilizado a tecinca do Convex Hull (envoltória(casca) convexa)
+SNV não linear ( Kernel Trick )
+- Tipos Kernel:
+    • Linear
+    • Gaussian
+    • Polynomail
+    • Tangent Hyperbolic
+- é possível criar novos atributos, chamados de Slack variable;
+-Vantagens 
+    • Não é muito influenciado por ruídos nos dados 
+    • Utilizado para classificação e regressão 
+    • Aprende conceitos não presentes nos dados originais 
+    • Mais fácil de usar do que redes neurais 
+-Desvantagens 
+    • Testar várias combinações de parâmetros 
+    • Lento • Black box
+Redes Neurais Artificiais
+-Resolver problemas que são resolvido por algoritmo pré-determinados;
+-Resolver problemas que não tem um algoritmo pré-determinados;
+-Resolver problemas com grande quantidade de dados e complex;
+-Somente inspirada em redes neurais biológicas
+-Transmição de  sinal "sinapses" entre  os neurais
+-Os axônios conecta os neuronios;
+-Sinapses são as informações que trafegam entre os neuronios;
+-Step Function, um tipo antigo de função de ativação
+-Os pessos são considerado as sinapses
+-O conhecimento da rede Neural são os pesssos, Ex: 
+    Navive Bayes - definir a melhor tabela de Proprabilidade para um conjunto de dados;
+    Arvores de Decisãoes - construir uma arvore de Proprabilidade;
+    Regras - gerar regras "condiçôes se  então" conforme as Proprabilidades de um conjunto de dados;
+    SNV - Aprender a melhor reta para classificar um conjunto de dados;
+    KNN - classificar dados conforme  as distâncias
+    Redes Neuronios - aprender o melhor conjunto de pessos;
+- Regra geral: soma das entradas X pessos aplicado a função de ativação
+- Problemas linear pode ser resolvidos com uma camada, mas problemas não linear tem que ser resolvidos
+  com rede de multicamadas(multilayer);
+- A taxa de aprendizagem atua entre o mínimo local;
+- O Momento "epoca" atua ente os minimos locais;
+- Bias ( Viés); 
+- MSE - Mean Square error;
+- RMSE - Root mean square error: Média da dirença dos valoes previsto ;
+- Regras geral para definir a quantidade de camas oculta: 
+  Neuronios = Entradas + Saidas / 2
+- Duas camadas funciona bem para duas camas ocultas
+- é necessário converter atributos categóricos para ordinarios 
+- RELU (Rectifier) é uma função de ativação que pode ser utilizada no lugar da Sigmoide
+- SoftMax é uma função de ativação para mais de um neuronio;
+- Batch gradiente - calcula o erro para todos os registros e atualizando os pessos;
+- Stochastic gradient descent - Calcular o erro para cada registros e atualiza os pessos;
+
+
+
+
+
+
+
