@@ -100,6 +100,13 @@ Redes Neurais Artificiais
 - SoftMax é uma função de ativação para mais de um neuronio;
 - Batch gradiente - calcula o erro para todos os registros e atualizando os pessos;
 - Stochastic gradient descent - Calcular o erro para cada registros e atualiza os pessos;
+Underfitting: Tentar aplicar um algoritmo simples em casos complexos;
+- Resultados ruim na base de treinamento;
+Overfitting:  Tentar aplicar um algoritmo completo em casos simples; 
+- Resultado bons na base de treinamento;
+- Resultado ruim na base de testes;
+- Erroas em novos dados;
+- Se adapta a base de treinamento, é uma memorização;
 
 
 
