@@ -1,0 +1,3 @@
+activate TensorFlow
+conda install scikit-learn
+conda install matplotlib
